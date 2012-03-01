@@ -8,7 +8,7 @@ development:
   encoding: unicode
   database: clone_development
   username: postgres
-  password: 123
+  password: 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -18,11 +18,11 @@ test:
   encoding: unicode
   database: clone_test
   username: postgres
-  password: 123
+  password: 
 
 production:
   adapter: postgresql
   encoding: unicode
   database: clone_production
   username: postgres
-  password: 123
+  password: 
