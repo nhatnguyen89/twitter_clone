@@ -1,11 +1,19 @@
 TwitterClone::Application.routes.draw do
+  get "relationships/create"
+
+  get "relationships/destroy"
+
   resources :users do
     member do
       get :following, :followers
     end
+    collection do
+    get :tigers
+    end
   end
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :microposts
+  resources :microposts, :only => [:create, :destroy]
+  resources :relationships, :only => [:create, :destroy]
   get "pages/home"
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
